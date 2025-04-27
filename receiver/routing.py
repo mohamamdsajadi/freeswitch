@@ -1,6 +1,6 @@
 from django.urls import re_path
-from . import consumers
+from consumer import AudioConsumer
 
 websocket_urlpatterns = [
-    re_path(r'ws/audio/$', consumers.AudioConsumer.as_asgi()),
+    re_path(r'ws/audio/$', AudioConsumer.as_asgi()),
 ]

@@ -2,6 +2,7 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 import os
 import datetime
 
+
 class AudioConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         self.filename = f"audio_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.pcm"
